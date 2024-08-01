@@ -12,10 +12,20 @@ main(){
 
     fahr=lower;
 
+    for (fahr=0;fahr<=upper; fahr=fahr+20)
+    {
+        celsius=(5.0/9.0)*(fahr-32.0);
+        printf("%3.0f %6.2f\n",fahr,celsius);
+    }
+    //fahr=320
+    /*
+    fahr=lower;
+
     while(fahr<=upper){ //Condicion inicial
         //Codigo iteracion
         celsius=(5.0/9.0)*(fahr-32.0);
         printf("%3.0f %6.2f\n",fahr,celsius);
         fahr=fahr+step;
     }
+    */
 }
