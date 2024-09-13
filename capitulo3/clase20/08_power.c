@@ -6,20 +6,20 @@ int powerV2(int base, int n);
 /*Uso de funciones */
 main(){
     int resultado;
-    int n;
+    int n;  //Comprobacion
     resultado=0;
 
     resultado=power(2,4);
-    printf("El valor de resultado es: %d\n",resultado);
+    printf("El valor de resultado usando power es: %d\n",resultado);
 
     n=4;
-    printf("Valor de n antes %d\n",n);
+    printf("El valor de n usando powerV2 antes: %d\n",n);
     resultado=powerV2(2,n);
-    printf("Valor de n despues %d\n",n);
     printf("El valor de resultado usando powerV2 es: %d\n",resultado);
+    printf("El valor de n usando powerV2 despues: %d\n",n);
 
     resultado=power(3,2);
-    printf("El valor de resultado es: %d\n",resultado);
+    printf("El valor de resultado usando power es: %d\n",resultado);
 
     resultado=powerV2(3,2);
     printf("El valor de resultado usando powerV2 es: %d\n",resultado);
