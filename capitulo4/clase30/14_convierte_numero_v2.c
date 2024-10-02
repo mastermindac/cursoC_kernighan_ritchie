@@ -1,8 +1,8 @@
 #include <stdio.h>
+#include "utils_consola.h"
 
 #define MAXLINE 11/* tamaño máximo de la línea de entrada*/
 
-int getline(char line[], int maxline); /*Función que captura una línea del usuario y la almacena en el array*/
 int atoi(char s[]); /*atoi: convierte s en entero */
 
 int main(){
@@ -12,7 +12,7 @@ int main(){
     char line[MAXLINE];
 
     /*Pedimos linea*/
-    printf("Escribe un nuemero por consola de maximo 10 cifras\n");
+    printf("Escribe un numero por consola de maximo 10 cifras\n");
     len=getline(line,MAXLINE);
 
     /*Convertimos el array */
@@ -33,22 +33,4 @@ int atoi(char s[])
     return n;
 }
 
-
-/*getline: lee una linea, la almacena en line y devuelve su longitud*/
-int getline(char line[], int lim){
-    int c,i;
-
-    /*Bloque que almacena los caracteres del usuario */
-    for(i=0;i<lim-1&&(c=getchar())!=EOF && c!='\n';++i)
-        line[i]=c;
-
-    if(c=='\n'){
-        line[i]=c;
-        ++i;
-    }
-
-    line[i]='\0';
-    return i;
-
-}
 
